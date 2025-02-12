@@ -30,7 +30,8 @@ sudo mkdir -p /var/log/TPLink
 
 # Copy the script to the directory
 sudo nano /opt/TPLink/generate_hosts.py
-# Paste the script content (<insert github url>) here and save (Ctrl+X, Y, Enter)
+# Paste the script content (https://github.com/rusdog2784/python_utilities/blob/main/tp-link-deco/generate_hosts.py)
+# here and save (Ctrl+X, Y, Enter)
 
 # Create environment file for the password
 sudo nano /opt/TPLink/tplink.env
