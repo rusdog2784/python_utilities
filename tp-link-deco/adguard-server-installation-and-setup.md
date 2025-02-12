@@ -9,15 +9,14 @@
 ```bash
 # Update package lists
 sudo apt update
-
-# Install Python 3.10 and pip if not already installed
-sudo apt install -y python3.10 python3.10-venv python3.10-dev python3-pip
+# Install Python 3.11 and pip if not already installed
+sudo apt install -y python3.11 python3.11-venv python3.11-dev python3-pip
 ```
 
 ## 2. Install the TPLink Router Package
 ```bash
 # Install the package using pip
-sudo pip3 install tplinkrouterc6u python-dotenv
+sudo pip3 install tplinkrouterc6u
 ```
 
 ## 3. Create Script Directory and Files
@@ -62,7 +61,9 @@ Add the following content:
 #!/bin/bash
 
 # Source the environment file
+set -a
 source /opt/TPLink/tplink.env
+set +a
 
 # Run the Python script and log output
 /usr/bin/python3 /opt/TPLink/generate_hosts.py 2>&1

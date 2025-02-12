@@ -96,6 +96,7 @@ def generate_hosts_file(router_url, password, output_file="/etc/hosts"):
             
             # Add final newline
             hosts_content.append("# --- END TPLink Device List ---",)
+            hosts_content.append("")
             
             # Write to file
             logger.info(f"Writing hosts file to {output_file}")
