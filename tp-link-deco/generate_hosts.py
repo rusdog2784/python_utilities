@@ -90,7 +90,7 @@ def generate_hosts_file(router_url, password, output_file="/etc/hosts"):
                 if device.ipaddr == "10.1.0.200":
                     continue
                 else:
-                    hostname = device.hostname.lower().replace(" ", "-")
+                    hostname = device.hostname.lower().replace(" ", "-").replace("'", "")
                     hosts_content.append(f"{device.ipaddr}\t{hostname}")
                     logger.info(f"Added device: {hostname} ({device.ipaddr})")
             
