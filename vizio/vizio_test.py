@@ -27,12 +27,12 @@ class Settings:
 
 # Received this token after running the following CLI commands:
 # 	pyvizio --ip=10.69.69.15:7345 --device_type=tv pair
-# 	pyvizio --ip=10.69.69.15:7345 --device_type=tv pair-finish --token=692238 --pin=7364 --ch_type=1
+# 	pyvizio --ip=10.69.69.15:7345 --device_type=tv pair-finish --token=<Vizio Authorization Token> --pin=7364 --ch_type=1
 AUTHORIZATION_TOKEN = "<Vizio Authorization Token>"
 
 tv = Vizio(
-    device_id="47LINIM5YZ02928",
-    name="Scott's Office",
+    device_id="<Your Vizio Device ID>",
+    name="<Your Vizio Device Name>",
     ip="10.69.69.15:7345",
     device_type="tv",
     auth_token=AUTHORIZATION_TOKEN
