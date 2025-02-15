@@ -7,7 +7,12 @@ from logging.handlers import RotatingFileHandler
 from tplinkrouterc6u import TPLinkDecoClient
 
 
-TESTING = False  # Set to True if testing locally
+TESTING = int(os.getenv("TESTING", 0))
+if TESTING == 1:
+    TESTING = True
+    print(f"TESTING MODE ENABLED")
+else:
+    TESTING = False
 
 
 def setup_logger(log_file="/var/log/TPLink/generate_hosts.log"):
